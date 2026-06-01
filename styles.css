@@ -1,0 +1,606 @@
+/*********f*********
+Author: Jordan Lerat
+Date: 2025-11-25
+Version: 1.0
+*******************/
+
+body{
+    background-image: url(images/Gym-Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#backgroundoverlay{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 85%;
+    margin: 0px auto;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+#mainheading{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+
+    background-color: black;
+    padding: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    font-family: "Science Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: rgb(107, 80, 80);
+}
+
+#logo{
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#logo img{
+    height: 200px;
+    width: auto;
+}
+
+#mainheading #top-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#mainheading .search-area{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+}
+.search-area input:hover{
+    transition: 1s;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(107, 80, 80);
+}
+#mainheading .slogan{
+    font-size: 25px;
+    text-align: center;
+    padding: 1px;
+    margin: 1px;
+    max-width: 40ch;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes fade-in{
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+span{
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+}
+
+span:nth-child(1){
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2){
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3){
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4){
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5){
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6){
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+#main-nav{
+    text-align: center;
+    background-color: darkgray;
+    border: 2px solid rgb(57, 57, 57);
+}
+    #main-nav ul{
+        display: inline;
+        list-style: none;
+    }
+        #main-nav ul li{
+            display: inline;
+            margin: 30px;
+            font-size: 35px;
+            padding: 7px 40px;
+            transition: 1s;
+        }
+           #main-nav ul li a{
+                font-family: "Science Gothic", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                font-style: normal;
+                color: rgb(107, 80, 80);
+                text-decoration: none;
+            }
+                #main-nav a:hover{
+                    color: rgb(0, 0, 0);
+                    font-weight: bold;
+                }
+                #main-nav ul li:hover{
+                    font-size: 40px;
+                    transition: 1s;
+                }
+
+#flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+#content{
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    padding: 5px;
+    padding-bottom: 0px;
+    transition: 1s;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid rgb(57, 57, 57);
+}
+
+.product-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(106, 96, 96, 0.2);
+    border: 2px solid rgb(57, 57, 57);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    width: 80%;
+    transition: 0.5s;
+}
+
+.product-card:hover{
+    transform: scale(1.1);
+}
+
+.product-card img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: rgb(107, 80, 80);
+}
+
+.buy-btn{
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-family: "Science Gothic", sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-btn:hover{
+    background-color: rgb(107, 80, 80);
+}
+
+#blog-container{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 30px;
+padding: 40px;
+font-family: "Science Gothic", sans-serif;
+font-optical-sizing: auto;
+font-weight: 700;
+font-style: normal;
+}
+
+
+.blog-card{
+background: white;
+width: 300px;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.blog-image{
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+
+.blog-info{
+padding: 20px;
+}
+
+
+.blog-title{
+font-size: 1.4rem;
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+
+.blog-description{
+font-size: 0.95rem;
+margin-bottom: 20px;
+color: #444;
+}
+
+
+.blog-button{
+display: inline-block;
+padding: 10px 15px;
+background: #222;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+}
+
+#contact_form{
+    width: 70%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(106, 96, 96, 0.2);
+    border: 2px solid rgb(57, 57, 57);
+    border-radius: 15px;
+    font-family: "Science Gothic", sans-serif;
+}
+
+#contact_form div{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact_form label{
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#contact_form input, #contact_form textarea{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+#contact_form input:focus, #contact_form textarea:focus{
+    background-color: black;
+    color: white;
+    border-color: rgb(107, 80, 80);
+}
+
+.error{
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+}
+
+#contact_form button{
+    padding: 12px 25px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Science Gothic", sans-serif;
+}
+
+#contact_form button:hover{
+    background-color: rgb(107, 80, 80);
+}
+
+#contact_form div:last-child{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#content h2, h3{
+    text-align: center;
+    font-family: "Science Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: rgb(107, 80, 80);
+}
+
+#toph2{
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+#bottomh2{
+    border-top: 2px solid black;
+    padding-top: 20px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+#content article{
+    flex: 2;
+    margin: 20px;
+    font-size: 18px;
+    font-family: "Science Gothic", sans-serif;
+    line-height: 1.6;
+    transition: 1s;
+}
+#content aside{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 20px 20px;
+    font-size: 16px;
+    font-family: "Science Gothic", sans-serif;
+    line-height: 1.6;
+    background-color: rgba(106, 96, 96, 0.445);
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: 1s;
+}
+#content aside a{
+    display: block;
+    width: 50px;
+    height: auto;
+    padding: 5px;
+    transition: 1s;
+}
+
+#content #social-media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:80px;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+#content aside #Dumbbell{
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: auto;
+    padding: 10px;
+}
+
+#content aside p{
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 2px solid black;
+    border-radius: 15px;
+}
+
+#content p{
+    font-size: 18px;
+    font-family: "Science Gothic", sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+    transition: 1s;
+}
+
+#content iframe{
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.text-carousel{
+    max-width: 700px;
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.text-carousel .track{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    animation: scroll 12s linear infinite;
+}
+
+.text-carousel .track span{
+    white-space: nowrap;
+    flex: 0 0 auto;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: -20px;
+}
+
+@keyframes scroll{
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    border-top: 2px solid rgb(107, 80, 80);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    font-family: "Science Gothic", sans-serif;
+    font-weight: 700;
+    color: white;
+
+}
+
+#footer a{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 768px){
+
+    #backgroundoverlay{
+    width: 98%;
+    }
+
+    #mainheading{
+        padding: 5px 10px;
+    }
+
+    #logo{
+        font-size: 25px;
+        gap: 10px;
+    }
+
+    #logo img{
+        height: 100px;
+        width: auto;
+    }
+
+    img.logo{
+        width: 80px;
+        height: auto;
+        margin: 5px 0;
+    }
+
+    #mainheading .slogan{
+        font-size: 25px;
+        max-width: 95%;
+    }
+
+    #mainheading #top-row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-area input{
+        width: 95%;
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    #main-nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #main-nav ul li{
+        border: 1px solid rgb(107, 80, 80);
+        display: block;
+        margin: 0;
+        font-size: 25px;
+        padding: 5px 0;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    #flex-container{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #content{
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #content article, #content aside{
+        flex: 1 1 100%;
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    #content aside{
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #content #social-media-icons{
+        margin: 0 auto;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .product-card{
+        flex-direction: column;
+        width: 90%;
+        margin: 10px auto;
+        align-items: center;
+    }
+
+    .product-card img{
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    #blog-container{
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    #contact_form{
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    #content p, #content article, #content aside, #blog-container{
+        font-size: 16px;
+    }
+
+    #content iframe{
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+}
