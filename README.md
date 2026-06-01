@@ -29,14 +29,27 @@ A responsive fitness-themed front-end website developed as part of my Web Develo
 
 ## Screenshots
 
-### Homepage
+## Homepage
+
 Designed a branded fitness homepage with navigation, embedded media, featured content, and social media integration.
 
-### Product Page
+![Homepage Screenshot](screenshots/homepage.png)
+
+---
+
+## Product Page
+
 Created a responsive product showcase featuring supplement-style product cards, pricing, descriptions, and call-to-action buttons.
 
-### Blog Page
+![Products Screenshot](screenshots/products-page.png)
+
+---
+
+## Blog Page
+
 Built a structured blog interface with article cards, readable content sections, and a clean front-end layout.
+
+![Blog Screenshot](screenshots/blog-page.png)
 
 ---
 
